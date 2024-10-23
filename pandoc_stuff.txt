@@ -1,0 +1,5 @@
+Robert Talbert, Ph.D.
+How I wrote my book using Markdown, Pandoc, and a little help from the internet
+https://rtalbert.org/how-i-wrote-my-book/
+
+
