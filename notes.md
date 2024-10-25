@@ -65,5 +65,27 @@ Here's an example image:
 
 ![This is an example image](example.png)
 
+# Introduction
+
+# Biopotential measurement systems
+
+##  
+
+# Biopotential signals
+
+## Excitable cells
+
+## The electrocardiogram (ECG)
+
+_Electrocardiography_ is the process of recording the electrical activity of the heart to produce an _electrocardiogram_ (ECG, but also sometimes abbreviated as EKG)
+
+## The electromyogram (EMG)
+
+_Electromyography_ is the process of recording an _electromyogram_ (EMG) - a record of the electrical activity of skeletal muscles.
+
+## The electroencephalogram
+
+## The electrooculogram
+
 # Bibliography
 
