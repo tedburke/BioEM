@@ -12,7 +12,7 @@ fontsize: 12pt
 
 # Test text
 
-Here is some text.
+Here is some text @horowitz1989art. This is another sentence @horowitz1989art.
 
 And now a list...
 
@@ -50,4 +50,6 @@ x=y
 Here's an example image:
 
 ![This is an example image](example.png)
+
+# Bibliography
 

@@ -1,3 +1,3 @@
-notes.pdf: notes.md *.png
-	pandoc notes.md --pdf-engine=xelatex -o notes.pdf
+notes.pdf: notes.md library.bib *.png
+	pandoc notes.md --pdf-engine=xelatex --citeproc --bibliography library.bib --csl=ieee.csl -o notes.pdf
 

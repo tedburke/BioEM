@@ -2,4 +2,10 @@ Robert Talbert, Ph.D.
 How I wrote my book using Markdown, Pandoc, and a little help from the internet
 https://rtalbert.org/how-i-wrote-my-book/
 
+Chris Krycho
+Academic Markdown and Citations
+https://v4.chriskrycho.com/2015/academic-markdown-and-citations.html
+
+25-Oct-2024: I'm currently using ieee.csl for the citation style. However, I added ieee-with-url.csl to the github repo too, in case that turns out to be a better option. I'm not sure what the difference is exactly, but I expect there will be several URL references, so if those don't work well with ieee.csl, then that may settle it.
+
 
