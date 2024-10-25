@@ -3,34 +3,36 @@ title: Bioelectromagnetism
 author: Ted Burke
 date: 23-Oct-2024
 geometry: margin=2.5cm
-mainfont: DejaVuSerif.ttf
+fontsize: 12pt
+#mainfont: DejaVuSerif.ttf
+mainfont: DejaVu Sans
 sansfont: DejaVuSans.ttf
 monofont: DejaVuSansMono.ttf 
 mathfont: texgyredejavu-math.otf
-fontsize: 12pt
 bibliography: library.bib
 csl: ieee.csl
 ---
 
+
 # Test text
 
-Here is some text @horowitz1989art. This is another sentence @horowitz1989art.
+Horowitz and Hill share much wisdom in their book, *The Art of Electronics* @horowitz1989art. 
 
-And now a list...
+Topics covered in that book which are relevant to the present document include:
 
-- apples
-- oranges
-- pears
+- resistance
+- operational amplifiers
+- instrumentation amplifiers
 
 # Test maths
 
-Ok, let's try an equation...
+The equations below were inserted using the single dollar marks.
 
 (@foo) An equation $e = mc^2$
 
 (@bar) $e = mc^2$
 
-And this $e = mc^2$ is some inline maths.
+The equation $e = mc^2$ was inserted as inline maths using single dollar signs.
 
 These equations are enclosed in a TeX environment:
 
@@ -39,13 +41,13 @@ x=y \\
 x=y
 \end{align}
 
-So are these:
+So is this one:
 
 \begin{equation}
 x=y
 \end{equation}
 
-This one uses the markdown dollars convention:
+This one uses markdown's double dollars marks:
 
 (@blah) $$y = mx + c$$
 
