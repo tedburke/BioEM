@@ -8,6 +8,8 @@ sansfont: DejaVuSans.ttf
 monofont: DejaVuSansMono.ttf 
 mathfont: texgyredejavu-math.otf
 fontsize: 12pt
+bibliography: library.bib
+csl: ieee.csl
 ---
 
 # Test text
@@ -30,20 +32,30 @@ Ok, let's try an equation...
 
 And this $e = mc^2$ is some inline maths.
 
+These equations are enclosed in a TeX environment:
+
 \begin{align}
 x=y \\
 x=y
 \end{align}
 
+So are these:
+
 \begin{equation}
 x=y
 \end{equation}
+
+This one uses the markdown dollars convention:
+
+(@blah) $$y = mx + c$$
 
 Now, let's try referring to equation \ref{myeqn}.
 
 \begin{equation}\label{myeqn}
 x=y
 \end{equation}
+
+As you can see, the LaTeX and markdown equation numbers appear to be counted independently of each other :(
 
 # Test image
 
