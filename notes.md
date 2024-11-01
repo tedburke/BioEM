@@ -32,7 +32,28 @@ The origin of those signals, and of most other biopotentials, lies in the genera
 
 # Biopotential signals
 
-## Excitable cells
+## Neurons
+
+A neuron is a nerve cell. Neurons process and transmit information around the body electrochemically. Different types of neuron vary dramatically in size, from less than a millimetre in length to potentially over one metre (for nerves connecting the spinal cord to the toes). It has been estimated that there are between 95-100 billion neurons in the human brain, each of which may be connected to as many as 10,000 other neurons.
+
+Different types of neurons have very different functions. For example, _afferent neurons_ (sensory nerves) relay information from various parts of the body to the central nervous system (CNS, the brain and spinal chord), whereas _efferent neurons_ (motor nerves) relay information from the CNS to the rest of the body to initiate muscle contractions or to control the operation of glands. Unlike many other types of cells in the body, most neurons cannot be replaced if they are destroyed.
+
+### Neuron structure
+
+![Diagram of neuron structure](images/neuron_structure.png)
+
+The structure of a typical neuron is illustrated in Figure 1.
+
+- The soma is the main central section of the neuron from which other parts
+branch out. It contains the cell nucleus.
+- The dendrites branch out in tree-like structures from the soma. They are the primary source of incoming information to the neuron, receiving signals from potentially thousands of other neurons through their post-synaptic membranes.
+- Neurotransmitters released by the presynaptic terminals of other neurons affect the potential of a dendrite’s postsynaptic membrane. If the cumulative effect of the input received from all connected neurons is sufficient to raise the neuron’s membrane potential above a threshold point, an action potential will be generated.
+- The axon hillcock is the point at which the axon branches out from the soma.  It has a high density of voltage dependent sodium channels, making it the point with the lowest threshold for action potential initiation.
+- The axon is a long (potentially over 1 metre) thin tail emanating out from the soma, which may itself have several branches. Once generated, an action potential propagates along the length of the axon at speeds ranging from 0.5 m/s to 120 m/s depending on the type of neuron.
+- The axon is coated by a myelin sheath. Along the length of the axon, there are gaps in the myelin sheath called Nodes of Ranvier. These nodes are about 1 µm apart. An action potential that is propagating down the axon jumps from node to node. The flow of ions through the cell membrane that is required to generate the action potential cannot occur where the myelin sheath is present, so the nodes need to be close enough together for an action potential at one to trigger an action potential in its nearest neighbour – otherwise, the action potential would not propagate down the nerve.
+- At the end of the axon is a network of branches, terminating in presynaptic terminals. When these terminals are excited by an action potential arriving through the axon, they release neurotransmitters into the synapse (the junction between neurons).
+- These neurotransmitters affect the postsynaptic membranes of many other neurons’ dendrites (in some cases the effect is excitatory; in others it is inhibitory).
+- In this way, initiation of an action potential in each neuron is the result of the action potentials of thousands of other neurons. Furthermore, each neuron in turn affects thousands of other neurons each time it generates an action potential. Collectively, large numbers of appropriately arranged neurons can perform complex tasks, such as pattern recognition.
 
 ## The electrocardiogram (ECG)
 
