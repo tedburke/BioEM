@@ -40,7 +40,7 @@ Different types of neurons have very different functions. For example, _afferent
 
 ### Neuron structure
 
-![Diagram of neuron structure](images/neuron_structure.png)
+![Diagram of neuron structure](figures/neuron_structure.png)
 
 The structure of a typical neuron is illustrated in Figure 1.
 
@@ -69,6 +69,32 @@ _Electromyography_ is the process of recording an _electromyogram_ (EMG) - a rec
 
 # Biopotential measurement systems
 
+## Basic electronic circuit concepts
+
+### Elements and networks
+
+- Elements, voltage, current, networks, nodes and node voltages, binary nodes, true nodes, branches and branch currents.
+- voltage source, current source, resistor, inductor, capacitor, diode, opamp.
+- Ohm's law for resistances.
+
+### Voltage dividers
+
+- Also known as potential dividers.
+- Key to understanding the circuits we're building up to.
+- Basic passive voltage divider with Vin, Vout and GND.
+- The voltage divider as a calculating element - weighted average of two arbitrary noode voltages.
+
+### Impedance and phasors
+
+- Representing sinusoidal voltages and currents as phasors.
+- Impedance - describe frequency-dependent relationship between voltage and current in a linear element using a single complex number.
+
+
+### The operational amplifier
+
+- The ideal opamp - rules of operation.
+- The non-inverting opamp circuit.
+- 
 
 # Bibliography
 
@@ -122,5 +148,9 @@ As you can see, the LaTeX and markdown equation numbers appear to be counted ind
 
 Here's an example image:
 
-![This is an example image](example.png)
+![This is an example image](figures/example.png)
+
+Here's an SVG image:
+
+![Example SVG image](figures/example.svg)
 
