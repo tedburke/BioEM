@@ -1,7 +1,7 @@
 ---
 title: Biopotential Measurement and Analysis
 author: Ted Burke
-date: Fri  1 Nov 14:25:54 GMT 2024
+date: Sat 18 Oct 17:23:53 IST 2025
 geometry: margin=2.5cm
 fontsize: 12pt
 #mainfont: DejaVuSerif.ttf
