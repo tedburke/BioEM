@@ -133,6 +133,104 @@ In equations involving voltage and current, the following notational convention 
 - The non-inverting opamp circuit.
 - 
 
+
+## Biopotential measurement with the 2-opamp instrumentation amplifier
+
+# Circuit analysis of 2-opamp instrumentation amplifier
+
+The following equation described the voltage relationships in opamp 1.
+
+\begin{equation}
+\frac{v_3 - V_{ref}}{R_1 + R_2} = \frac{v_2 - V_{ref}}{R_2}
+\end{equation}
+
+Multiplying both sides by both denominators yields the following.
+
+\begin{equation}
+R_2v_3 - R_2V_{ref} = R_1v_2 - R_1V_{ref} + R_2v_2 - R_2V_{ref}
+\end{equation}
+
+which simplifies to
+
+\begin{equation}
+v_3 = \frac{R_1}{R_2}v_2 + \frac{R_2}{R_2}v_2 - \frac{R_1}{R_2}V_{ref}
+\end{equation}
+
+and hence
+
+\begin{equation}\label{v3_eq}
+v_3 = \frac{R_1+R_2}{R_2}v_2 - \frac{R_1}{R_2}V_{ref}
+\end{equation}
+
+Applying the equivalent analysis to opamp 2 yields the following (with $R_1$ in place of $R_2$, $R_2$ in place of $R_1$, $v_3$ in place of $V_{ref}$, $v_1$ in place of $v_2$, and $v_4$ in place of $v_3$): 
+
+\begin{equation}\label{v4_eq1}
+v_4 = \frac{R_2+R_1}{R_1}v_1 - \frac{R_2}{R_1}v_3
+\end{equation}
+
+Substituting equation \ref{v3_eq} into equation \ref{v4_eq1},
+
+\begin{align}\label{v4_eq}
+v_4 &= \frac{R_2+R_1}{R_1}v_1 - \frac{R_2}{R_1}\frac{R_1+R_2}{R_2}v_2 + \frac{R_2}{R_1}\frac{R_1}{R_2}V_{ref} \\
+&= \frac{R_1+R_2}{R_1}v_1 - \frac{R_1+R_2}{R_1}v_2 + V_{ref} \\
+\end{align}
+
+Hence,
+
+\begin{equation}\label{v4_eq2}
+v_4 = \frac{R_1+R_2}{R_1}(v_1 - v_2) + V_{ref}
+\end{equation}
+
+The full amplifier includes an additional gain stage (opamp 3, plus $R_3$ and $R_4$), which receives $v_4$ as its input and produces $v_{out}$ as its output. $v_out$ can be expressed in terms of $v_4$ as follows.
+
+\begin{equation}\label{v_outv_4_eq}
+v_{out} = V_{ref} + \frac{R_3 + R_4}{R_3}(v_4 - V_{ref})
+\end{equation}
+
+Substituting equation \ref{v4_eq} into equation \ref{v_outv_4_eq} yields
+
+\begin{equation}
+v_{out} = V_{ref} + \frac{R_3 + R_4}{R_3}\left( \frac{R_1 + R_2}{R_1}(v_1 - v_2) + V_{ref} - V_{ref} \right)
+\end{equation}
+
+Finally, tidying up, we obtain the following tidy expression for $v_out$ in terms of the differential input $v_diff = v_1 - v_2$ and $V_{ref}$.
+
+\begin{equation}
+v_{out} = V_{ref} + \frac{R_3 + R_4}{R_3}\frac{R_1 + R_2}{R_1}(v_1 - v_2)
+\end{equation}
+
+This can be written as
+
+\begin{equation}
+v_{out} = V_{ref} + A_{diff}v_{diff} + A_{cm}v_{cm}
+\end{equation}
+
+where $v_{diff}$ is the differential voltage input,
+
+\begin{equation}
+v_{diff} = v_1 - v_2
+\end{equation}
+
+$v_{cm}$ is the common-mode voltage input,
+
+\begin{equation}
+v_{cm} = \frac{v_1 + v_2}{2}
+\end{equation}
+
+$A_{diff}$ is the differential-mode gain,
+
+\begin{equation}
+A_{diff} = \frac{R_1+R_2}{R_1}\frac{R_3+R_4}{R_3}
+\end{equation}
+
+and $A_{cm}$ is the common-mode gain.
+
+\begin{equation}
+A_{cm} = 0
+\end{equation}
+
+
+
 # Bibliography
 
 
