@@ -134,11 +134,15 @@ FIGURE SHOWING CIRCUIT SYMBOL FOR CAPACITOR
 
 Like the resistor, the capacitor is a two-terminal circuit element. However, the relationship between current and voltage in a capacitor is slightly more complicated:
 
+\begin{equation}
 i = C \frac{\mathrm{d}v}{\mathrm{d}t} 
+\end{equation}
 
 What this means is that current is proportional to the rate of change of voltage. The relationship between current and voltage in a capacitor is arguably revealed more clearly by rearranging the equation as follows. Multiply both sides by dt, then integrate, yielding the following (I’m assuming zero initial conditions):
 
+\begin{equation}
 v = \frac{1}{C} \int i \, \mathrm{d}t 
+\end{equation}
 
 The capacitor voltage is the integral of all the current that has flowed through it. The simplest physical realisation of a capacitor consists of two parallel conducting plates separated by an insulator, each with a wire attached. When current flows through the capacitor, positive charge accumulates on one plate and negative charge accumulates on the other. As the plates become more and more highly charged, the capacitor voltage builds up until eventually whatever voltage source is driving the current can’t push hard enough to push any more through and the current grinds to a halt. We can therefore think of the capacitor voltage as remembering how much current has flowed through the device, charging the two plates.
 
@@ -156,15 +160,15 @@ The impedance of a capacitor is purely imaginary:
 
 \begin{equation}
 Z_C = \frac{1}{j \omega C} 
-\ewnd{equation}
+\end{equation}
 
-where j is the square root of -1, \omega  is angular frequency (in radians per second) and C is capacitance (in Farads). The magnitude of $Z_C$  can be thought of as how much the capacitor resists the flow of current. Clearly, this magnitude is heavily dependent on the frequency \omega .
+where j is the square root of -1, $\omega$  is angular frequency (in radians per second) and C is capacitance (in Farads). The magnitude of $Z_C$  can be thought of as how much the capacitor resists the flow of current. Clearly, this magnitude is heavily dependent on the frequency $\omega$.
 
 \begin{equation}
 \left| Z_C \right| = \frac{1}{\omega C} 
 \end{equation}
 
-At DC (\omega = 0 ), the magnitude of $Z_C$ is infinite, which reflects the fact that DC current cannot flow through a capacitor (remember the elastic membrane in the pipe!). However, the higher the frequency, the smaller $|Z_C|$ becomes, until at very high frequencies it becomes so small that it is virtually insignificant, resembling a short circuit.
+At DC ($\omega = 0$), the magnitude of $Z_C$ is infinite, which reflects the fact that DC current cannot flow through a capacitor (remember the elastic membrane in the pipe!). However, the higher the frequency, the smaller $|Z_C|$ becomes, until at very high frequencies it becomes so small that it is virtually insignificant, resembling a short circuit.
 
 
 
