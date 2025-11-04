@@ -108,6 +108,100 @@ In equations involving voltage and current, the following notational convention 
 | v | (lower case v) | Instantaneous voltage | This voltage signal is a function of time, so it is often written as v(t). |
 | i | (lower case i) | Instantaneous current | This current signal is a function of time, so it is often written as i(t). |
 
+### Electrical power
+
+The instantaneous power dissipated in a two-terminal circuit element (such as a resistor) is
+
+\begin{equation}
+p = v \times i 
+\end{equation}
+
+Keep in mind that p, v and i are all functions of time, i.e. they can change.
+
+### Resistors
+
+FIGURE SHOWING CIRCUIT SYMBOL FOR RESISTOR
+
+A resistor is a two-terminal circuit element. In circuit diagrams, a resistor is normally represented by the symbol shown on the right (although other symbols are sometimes used). Its electrical behaviour is defined by Ohm’s Law:
+
+v = i \times R 
+
+where R is the resistance of the resistor. To describe this behaviour in words: the current in a resistor is proportional to the voltage across it. For example, if the voltage trying to push current through the resistor doubles, the current will also double. A resistance in a circuit could be a physical resistor component, or it could be modeling electrical resistance in another component or object (e.g. the parasitic resistance of the copper wire in an induction coil).
+
+### Capacitors
+
+FIGURE SHOWING CIRCUIT SYMBOL FOR CAPACITOR
+
+Like the resistor, the capacitor is a two-terminal circuit element. However, the relationship between current and voltage in a capacitor is slightly more complicated:
+
+i = C \frac{\mathrm{d}v}{\mathrm{d}t} 
+
+What this means is that current is proportional to the rate of change of voltage. The relationship between current and voltage in a capacitor is arguably revealed more clearly by rearranging the equation as follows. Multiply both sides by dt, then integrate, yielding the following (I’m assuming zero initial conditions):
+
+v = \frac{1}{C} \int i \, \mathrm{d}t 
+
+The capacitor voltage is the integral of all the current that has flowed through it. The simplest physical realisation of a capacitor consists of two parallel conducting plates separated by an insulator, each with a wire attached. When current flows through the capacitor, positive charge accumulates on one plate and negative charge accumulates on the other. As the plates become more and more highly charged, the capacitor voltage builds up until eventually whatever voltage source is driving the current can’t push hard enough to push any more through and the current grinds to a halt. We can therefore think of the capacitor voltage as remembering how much current has flowed through the device, charging the two plates.
+
+### Impedance
+
+This brings us onto the important concept of impedance which, again speaking loosely, can be thought of as "resistance" that changes as a function of frequency. Like resistance, impedance is measured in units of ohms. However, resistance always has a real value, whereas in general impedance is complex.
+
+The impedance of a resistor is equal to its resistance, R:
+
+\begin{equation}
+Z_R = R 
+\end{equation}
+
+The impedance of a capacitor is purely imaginary:
+
+\begin{equation}
+Z_C = \frac{1}{j \omega C} 
+\ewnd{equation}
+
+where j is the square root of -1, \omega  is angular frequency (in radians per second) and C is capacitance (in Farads). The magnitude of $Z_C$  can be thought of as how much the capacitor resists the flow of current. Clearly, this magnitude is heavily dependent on the frequency \omega .
+
+\begin{equation}
+\left| Z_C \right| = \frac{1}{\omega C} 
+\end{equation}
+
+At DC (\omega = 0 ), the magnitude of $Z_C$ is infinite, which reflects the fact that DC current cannot flow through a capacitor (remember the elastic membrane in the pipe!). However, the higher the frequency, the smaller $|Z_C|$ becomes, until at very high frequencies it becomes so small that it is virtually insignificant, resembling a short circuit.
+
+
+
+### Plumbing analogy for voltage and current
+
+Imagine a plumbing system in which a pump drives water around a closed circuit – something like a home central heating system. The same water travels around and around the system, passing through the pipes (and presumably the pump, boiler, radiators, etc.) over and over again. The pump has to consume energy to keep the circulation going. The harder the pump pushes the water, the faster the water circulates. If the pipes are too narrow, or if they have become partially blocked by sediment over time, then circulation will be reduced even is the pump is still pushing at full strength. The flow rate depends on two things: how hard the pump pushes and how easy or hard it is to push water through the system.
+
+IMAGE OF PUMP AND SIMPLE CLOSED LOOP PIPE
+
+If you get confused between electrical voltage and current, think of the following analogy:
+
+Voltage is analogous to how hard the pump is pushing. The water pressure at the output of the pump is high. The water pressure at the input to the pump is very low. The difference in pressure created by the pump creates a potential difference across the entire plumbing system (boiler, pipes, radiator) that encourages water to flow through the system. That’s exactly what a voltage source does in an electric circuit, except of course that it’s electrical potential rather than water pressure. Electrical current is analogous to the rate at which water flows around the system.
+
+I’m going to expand on this plumbing analogy below as each of the basic circuit elements (resistors, capacitors and inductors) is introduced.
+
+### Plumbing analogy for resistor
+
+DIAGRAM OF PLUMBING ANALOGY FOR CIRCUIT WITH ONE RESISTANCE
+
+Returning to the plumbing analogy, a resistance is like a partial blockage at some point in the pipe. It creates a "bottle neck" which reduces the overall flow rate through the system. If we measured the water pressure in the pipe either side of such a blockage, we would see an abrupt drop in water pressure across it. The diagram above illustrates a system in which a partial blockage is resisting the flow of water around the circuit.
+
+DIAGRAM OF PLUMBING ANALOGY FOR CIRCUIT WITH TWO RESISTANCES
+
+The diagram above illustrates a second system in which there are two roughly equal blockages resisting the flow of water. The pump is still generating a substantial pressure drop across the whole system, but the blockages are reducing the flow rate substantially. Almost half of the total pressure is dropped across the first blockage and almost half is dropped across the second blockage, leaving very little pressure drop to drive water around the rest of the system.
+
+### Plumbing analogy for capacitor
+
+DIAGRAM OF PLUMBING ANALOGY FOR RC CIRCUIT WITH DC SOURCE
+
+Returning to my plumbing analogy again, a capacitor is like a very elastic (but sturdy) rubber membrane that blocks the pipe. As current flows through the pipe, the membrane stretches out further and further in the direction of flow. However, the farther the elastic membrane stretches, the harder it pushes back resisting the flow. After a short time, the elastic force of the stretched membrane pushes the water back as hard as the pump can push it forwards and the flow comes to a halt. So, the capacitor allows current to flow in one direction for a short time, but the more current flows through it in one direction the harder it pushes back. Ultimately, current cannot continue flowing in one direction through the capacitor.
+
+DIAGRAM OF PLUMBING ANALOGY FOR RC CIRCUIT WITH AC SOURCE
+
+The plumbing analogy also provides a good insight into the AC behaviour of the capacitor. AC (alternating current) is just current that moves back and forth in a circuit (strictly speaking, it varies sinusoidally) rather than moving continuously in one direction. Using the plumbing analogy, imagine that instead of driving the water continuously in one direction, the pump is now some kind of piston which drives the water back and forth in the pipes. In this situation, the elastic membrane is much less resistant to the flow. It repeatedly stretches out one way then the other. When the membrane is stretching out it stores energy, and when it contracts it releases energy. Furthermore, its movement is not perfectly synchronised with the piston pump – they oscillate at the same frequency, but there is a constant phase difference between them. Sometimes the membrane works with the pump, pushing in the same direction, and sometimes it works against the pump. Over the course of one full cycle, the elastic membrane stores and releases exactly the same amount of energy. Although it can store energy, it always ends up being released. It doesn’t dissipate power. In this respect, it is fundamentally different to a resistor, which certainly does dissipate real power (as heat).
+
+This is a very good analogy for the behaviour of a capacitor when AC current flows through it. It resists the flow of DC current (current that flows continuously in one direction) because once the capacitor is charged, it pushes back too hard against the voltage source. However, when the current is driven back and forth by an AC voltage, the capacitor offers less resistance – it bends one way then the other, allowing the current to oscillate. In fact, the faster the voltage switches back and forth, the less resistance the capacitor offers to the flow of current. I’m using the term “resistance” loosely here, since we saw in the previous section on the resistor that “resistance” has a specific meaning in electrical engineering – namely, it describes things that conform to Ohm’s Law. What the capacitor does when it resists the flow of current is different – it doesn’t follow Ohm’s Law – but it does affect the magnitude of the current produced by a given voltage.
+
 ### Elements and networks
 
 - Elements, voltage, current, networks, nodes and node voltages, binary nodes, true nodes, branches and branch currents.
