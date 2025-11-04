@@ -32,6 +32,13 @@ The origin of those signals, and of most other biopotentials, lies in the genera
 
 # Biopotential signals
 
+## What is a biopotential?
+
+In normal usage, the word biopotential refers to an electrical signal recorded from a living organism. Conventionally, the word biopotential refers to one of the following two things:
+
+1. **Unipolar lead:** A time-varying _electrical potential at a single point_ on (or in) an organism, relative to some reference electrical potential in the system (e.g. ground).
+1. **Bipolar lead:** A time-varying _electrical potential difference_ between two points on (or in) an organism.
+
 ## Neurons
 
 A neuron is a nerve cell. Neurons process and transmit information around the body electrochemically. Different types of neuron vary dramatically in size, from less than a millimetre in length to potentially over one metre (for nerves connecting the spinal cord to the toes). It has been estimated that there are between 95-100 billion neurons in the human brain, each of which may be connected to as many as 10,000 other neurons.
@@ -67,9 +74,39 @@ _Electromyography_ is the process of recording an _electromyogram_ (EMG) - a rec
 
 ## The electrooculogram
 
+
+
 # Biopotential measurement systems
 
+## What is a lead?
+
+In biopotential measurement, the word _lead_ always refers to an individual signal, rather than a physical wire. This is a frequent cause of confusion!
+
+Recording a single bipolar lead typically involves connecting three electrodes to the subject, each with its own physical wire connecting it to the recording instrument. One of the three electrodes provides a low-impedance connection between the human subject and the amplifier. The recording instrument measures the voltage (i.e. the electrical potential difference) between the other two electrodes, resulting in just one recorded signal – a bipolar lead.
+
 ## Basic electronic circuit concepts
+
+To understand biopotential measurement circuits, you don’t need to be an electronics expert, but you do need to be familiar with some basic circuit elements and concepts. The amount of knowledge you need is not vast, but it’s important to understand it thoroughly. The intended emphasis in what follows is on _understanding_. To gain a useful understanding of biopotential amplifier circuits, you really need to _intuitively_ understand the behaviour of resistors, capacitors and op-amps. When I say _intuitively_, what I mean is that it’s not enough to learn off a formula for something like a voltage divider – you need to understand it well enough that, at a glance, you can recognise one in a circuit and work out what it’s doing.
+
+These circuits are not very complex, but their operation rests on some subtle principles (such as _negative feedback_) which, if poorly understood, permit only a very superficial understanding of biopotential instrumentation.
+
+### Voltage and current
+
+Firstly, let’s be crystal clear about the difference between voltage and current.
+
+- **Voltage** is the difference in electrical potential between two points in circuit. A difference in potential must be measured between two points, so it can cause confusion when people talk about the voltage at a single point in a circuit. In this case, the voltage in question is the difference in electrical potential between that point and some reference potential, such as earth or the “0V” terminal of the power supply.
+- Electrical **current** tells us how many units of charge per second are flowing through a branch in a circuit. Often, the charge moves in the form of free electrons. For example, when current flows in a copper wire, the electrons that transport the charge move quite freely from atom to atom in the metal. However, electrical current can take other forms. For example, electrical currents inside the human body are almost all _ionic_ currents. Whatever form it takes, a current measured in Amps tells us how many Coulombs of charge are transported per second.
+
+### Notation for currents and voltages
+
+In equations involving voltage and current, the following notational convention is used throughout this document:
+
+| Symbol | notation | Denotes | Description |
+|--------|----|---------|-------------|
+| V | (upper case V) | Steady state voltage | Either a constant DC voltage or a sinusoidal AC voltage with constant frequency and amplitude. |
+| I | (upper case I) | Steady state current | Either a constant DC current which flows at a constant rate in one direction, or a sinusoidal AC current with constant frequency and amplitude. |
+| v | (lower case v) | Instantaneous voltage | This voltage signal is a function of time, so it is often written as v(t). |
+| i | (lower case i) | Instantaneous current | This current signal is a function of time, so it is often written as i(t). |
 
 ### Elements and networks
 
